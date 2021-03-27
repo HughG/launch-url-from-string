@@ -1,0 +1,5 @@
+<idea-plugin>
+    <extensions defaultExtensionNs="com.intellij.plugins.markdown">
+
+    </extensions>
+</idea-plugin>

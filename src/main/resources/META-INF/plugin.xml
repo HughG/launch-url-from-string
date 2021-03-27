@@ -64,6 +64,11 @@ This plugin is written in Kotlin. The source is available on <a href="https://gi
          on how to target different products -->
     <depends>com.intellij.modules.platform</depends>
 
+    <depends>com.intellij.modules.java</depends>
+
+    <!-- Markdown specific tasks -->
+    <depends optional="true" config-file="withMarkdown.xml">org.intellij.plugins.markdown</depends>
+
     <extensions defaultExtensionNs="com.intellij">
         <psi.referenceContributor implementation="com.pgschaaf.launchurlfromstring.RegexPsiReferenceContributor"/>
     </extensions>

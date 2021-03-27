@@ -1,6 +1,6 @@
 /out
+/build/
+/.gradle/
 *.jar
-/.gradle/buildOutputCleanup/*
-/.gradle/5.2.1/*
-/.gradle/vcs-1/*
 /gradlew*
+

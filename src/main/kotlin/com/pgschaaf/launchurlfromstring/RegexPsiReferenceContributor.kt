@@ -20,6 +20,7 @@ import com.intellij.ide.plugins.PluginManager
 import com.intellij.openapi.paths.WebReference
 import com.intellij.patterns.StandardPatterns
 import com.intellij.psi.*
+import com.intellij.psi.search.GlobalSearchScope
 import com.intellij.util.ProcessingContext
 import org.jetbrains.rpc.LOG
 import java.util.*
@@ -60,9 +61,33 @@ object RegexPsiReferenceProvider: PsiReferenceProvider() {
    override fun getReferencesByElement(element: PsiElement, context: ProcessingContext) =
          element
                .url
-               .map {WebReference(element, it)}!!
+               .map { getReference(element, it ?: "") }!!
                .map {arrayOf(it)}
                .orElseGet {arrayOfNulls(0)}!!
+
+    private fun getReference(
+        element: PsiElement,
+        url: String
+    ): PsiReference? {
+        val schemeEnd = url.indexOf(':')
+        if (schemeEnd == -1) {
+            return WebReference(element, url)
+        }
+        val scheme = url.take(schemeEnd)
+        return if (scheme.startsWith("!")) {
+            val lang = scheme.drop(1)
+            val ref = url.substring(schemeEnd)
+            when (lang) {
+                "java" -> {
+                    val project = element.project
+                    JavaPsiFacade.getInstance(project).findClass(ref, GlobalSearchScope.allScope(project))?.reference
+                }
+                else -> WebReference(element, url)
+            }
+        } else {
+            WebReference(element, url)
+        }
+    }
 }
 
 /* ----------------- ENHANCEMENTS ----------------- */
