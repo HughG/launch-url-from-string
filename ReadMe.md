@@ -1,6 +1,12 @@
 # Launch URL from a String
 **IntelliJ Plugin**
 
+[Test](wikipedia:Kotlin_)
+[Test](!java:com.pgschaaf.lachurlfromstring.PsiElementEnhancementKt)
+[Test](com.pgschaaf.launchurlfromstring.ExampleClass)
+[Test](com.pgschaaf.launchurlfromstring.ExampleClass)
+[Test](ExampleClass)
+
 ## Summary
 Enables hyperlink navigation from any matching string literal, comment, XML attribute value, or XML element text to a URL defined by the "Issue Navigation" rules in the VCS settings.
 

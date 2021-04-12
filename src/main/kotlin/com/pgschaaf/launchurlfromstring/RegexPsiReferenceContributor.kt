@@ -91,7 +91,7 @@ object RegexPsiReferenceProvider: PsiReferenceProvider() {
 }
 
 /* ----------------- ENHANCEMENTS ----------------- */
-fun <T> ClassLoader.tryToLoad(name: String, id: String) = Optional.ofNullable(
+internal fun <T> ClassLoader.tryToLoad(name: String, id: String) = Optional.ofNullable(
       try {
          @Suppress("UNCHECKED_CAST")
          Class.forName(name, true, this) as Class<T>
