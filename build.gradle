@@ -1,6 +1,5 @@
 plugins {
     id 'org.jetbrains.intellij' version '0.4.18'
-//    id 'org.jetbrains.kotlin.jvm' version '1.4.32'
     id 'org.jetbrains.kotlin.jvm' version '1.3.72'
 }
 
@@ -17,23 +16,17 @@ dependencies {
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
-    // NOTE 2021-04-13 hugr: Tried 2021.1 but, as of this writing, the Markdown plugin setting and preview is broken.
-    // Also, use of 2021.1 requires upgrading this project's JDK to 11, which requires upgrading Gradle to 5.6.4.
-//    version '2021.1'
     version '2020.2.4'
-//    version '2019.3.4'
 
-//    downloadSources false
     downloadSources true
-//    plugins 'kotlin'
+
     // To get plugin IDs, see https://plugins.jetbrains.com/docs/intellij/plugin-dependencies.html
     // (linked from https://github.com/JetBrains/gradle-intellij-plugin/).
     plugins = [
             'java',
             'Kotlin',
             'markdown',
-            'org.jetbrains.plugins.rest:202.6397.21',
-//            'org.jetbrains.plugins.rest:211.6693.44',
+            'org.jetbrains.plugins.rest:202.6397.21'
     ]
 }
 compileKotlin {

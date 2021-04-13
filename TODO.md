@@ -9,12 +9,18 @@
 * DONE: Implement this for Markdown plugin, since it _does_ provide hooks for references.
 * DONE: Make those be references to Java classes.
   * BUT: This only allows me to navigate from the class to the reference in the doc, not the other way :-(
-* Explore what variants of Markdown the plugin supports, to see if it has something not too painful
+* DONE: Explore what variants of Markdown the plugin supports, to see if it has something not too painful
 for reference documentation.
-* Make those also for Groovy classes, and maybe Kotlin.
-* Find a way to navigate the link from the reference to the class.
+  * Doesn't support anything fancy.
+* DONE: Find a way to navigate the link from the reference to the class.
+  * It turns out that navigating from the class to the reference works even without the plugin, somehow!
 * Find a way to make references to individual (test) methods.
+* Maybe: make the reference a "polyvariant" reference, in case there are multiple classes with the same name,
+although that should probably trigger an issue/warning/ 
 * Try "host language in string literals" hook for Rest plugin?
+* Suppress (or _post hoc_ remove?) file references for links from Markdown files, so that IntelliJ doesn't
+complain about them.  (Might require forking the Markdown plugin :-\) 
+* Make it work also for Groovy classes, and maybe Kotlin.
 
 # Notes
 
