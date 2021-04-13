@@ -7,6 +7,8 @@
 [Test](com.pgschaaf.launchurlfromstring.ExampleClass)
 [Test](ExampleClass)
 
+Direct web link: <https://www.java.com/en/>
+
 ## Summary
 Enables hyperlink navigation from any matching string literal, comment, XML attribute value, or XML element text to a URL defined by the "Issue Navigation" rules in the VCS settings.
 
