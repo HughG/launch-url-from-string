@@ -6,6 +6,8 @@ Sample Planguage Requirements
     a way to change the default role to a new one, and to add meaning/processing to that role.  See
     http://docutils.sf.net/docs/ref/rst/roles.html.
 
+:foo:`com.pgschaaf.launchurlfromstring.ExampleClass`
+
 Automation
 ^^^^^^^^^^^^
 

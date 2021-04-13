@@ -40,7 +40,7 @@ object LanguageElementTextReferenceContributor: PsiReferenceContributor() {
     }
 }
 
-private class SingleTargetElementReference(
+internal class SingleTargetElementReference(
     element: PsiElement,
     private val target: PsiElement,
     soft: Boolean = false
@@ -91,5 +91,4 @@ object LanguageElementTextReferenceProvider: PsiReferenceProvider() {
         }
         return references.toTypedArray()
     }
-
 }
