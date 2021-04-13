@@ -26,6 +26,9 @@ complain about them.  (Might require forking the Markdown plugin :-\)
 * Try allowing Markdown "autolinks" to link to Java classes as well, if I can work out how those references are made.
 This would presumably require making a custom URL scheme.
 * Try "host language in string literals" hook for Rest plugin?
+  * PsiLanguageInjectionHost is implemented by com.jetbrains.rest.psi.RestLine.
+  * Apparently you can inject references into language injection hosts: see
+  https://plugins.jetbrains.com/docs/intellij/additional-minor-features.html#reference-injection
 * Make it work also for Groovy classes, and maybe Kotlin.
 
 # Notes
